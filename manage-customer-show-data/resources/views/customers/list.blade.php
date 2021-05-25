@@ -11,32 +11,35 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<table class="table table-striped table-hover">
-    <thead>
-    <tr>
-        <th scope="col">STT</th>
-        <th scope="col">Customer Name</th>
-        <th scope="col">Day of Birth</th>
-        <th scope="col">Email</th>
-    </tr>
-    </thead>
-    <tbody>
-    @if(count($customers) == 0)
+<div class="container">
+    <h1>Danh Sách Khách Hàng</h1>
+    <table class="table table-striped table-hover">
+        <thead>
         <tr>
-            <td colspan="4">No data</td>
+            <th scope="col">STT</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Day of Birth</th>
+            <th scope="col">Email</th>
         </tr>
-    @else
-        @foreach($customers as $key => $customer)
+        </thead>
+        <tbody>
+        @if(count($customers) == 0)
             <tr>
-                <th scope="row">{{ ++$key }}</th>
-                <td>{{ $customer['name'] }}</td>
-                <td>{{ $customer['dob'] }}</td>
-                <td>{{ $customer['email'] }}</td>
+                <td colspan="4">No data</td>
             </tr>
-        @endforeach
-    @endif
-    </tbody>
-</table>
+        @else
+            @foreach($customers as $key => $customer)
+                <tr>
+                    <th scope="row">{{ ++$key }}</th>
+                    <td>{{ $customer['name'] }}</td>
+                    <td>{{ $customer['dob'] }}</td>
+                    <td>{{ $customer['email'] }}</td>
+                </tr>
+            @endforeach
+        @endif
+        </tbody>
+    </table>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
