@@ -16,19 +16,19 @@ class CustomerController extends Controller
                 'email' => 'tuan@gmail.com'
             ],
             '1' => [
-                'id' => 1,
+                'id' => 2,
                 'name' => 'Loc van Khoi',
                 'dob' => '1995',
                 'email' => 'khoi@gmail.com'
             ],
             '2' => [
-                'id' => 1,
+                'id' => 3,
                 'name' => 'Pham van Trong',
                 'dob' => '2001',
                 'email' => 'trong@gmail.com'
             ],
             '3' => [
-                'id' => 1,
+                'id' => 4,
                 'name' => 'Tran duc Duy',
                 'dob' => '2001',
                 'email' => 'duy@gmail.com'
